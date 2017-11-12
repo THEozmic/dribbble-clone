@@ -1,0 +1,43 @@
+{
+  "name": "dribbble-clone",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.2",
+    "npm": "5.4.2"
+  },
+  "description": "WIP: A dribbble clone built with ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack ./client/js/App.jsx -w",
+    "start": "babel -d ./build ./server -s --copy-files && node ./build/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THEozmic/dribbble-clone.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/THEozmic/dribbble-clone/issues"
+  },
+  "homepage": "https://github.com/THEozmic/dribbble-clone#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "http": "0.0.0",
+    "jquery": "^3.2.1",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "webpack": "^3.8.1"
+  }
+}
