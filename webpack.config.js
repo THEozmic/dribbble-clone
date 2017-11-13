@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'inline-sourcemap',
+  devtool: false,
   entry: './client/js/App.jsx',
   node: {
     net: 'empty',
@@ -45,11 +45,11 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        NODE_ENV: "'production'"
       }
     }),
     new ExtractTextPlugin({ filename: 'style.css', allChunks: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true })
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true })
   ],
 };

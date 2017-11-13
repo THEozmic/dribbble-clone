@@ -3,13 +3,17 @@ import logger from 'morgan';
 import path from 'path';
 import bodyParser from 'body-parser';
 import http from 'http';
+import compression from 'compression';
 
 
 // Set up the express app
 const app = express();
 
+app.use(compression());
+
 // Log requests to the console.
 app.use(logger('dev'));
+
 
 // Parse incoming requests data (https://github.com/expressjs/body-parser)
 app.use(bodyParser.json());

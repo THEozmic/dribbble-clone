@@ -9,8 +9,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack ./client/js/App.jsx -w",
-    "start": "babel -d ./build ./server -s --copy-files && node ./build/app"
+    "build:dev:client": "webpack ./client/js/App.jsx -w",
+    "build:dev:server": "babel -d ./build ./server -s --copy-files -w",
+    "build:dev": "concurrently \" npm run build:dev:client\" \" npm run build:dev:server \" ",
+    "start:dev": "nodemon ./build/app",
+    "build:client": "webpack ./client/js/App.jsx",
+    "build:server": "babel -d ./build ./server -s --copy-files",
+    "build": "concurrently \" npm run build:client\" \" npm run build:server \" ",
+    "start": "node ./build/app",
+    "postinstall": "[ \"$NODE_ENV\" != production ] && exit 0; npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "http": "0.0.0",
@@ -39,5 +47,9 @@
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.12.1"
   }
 }
