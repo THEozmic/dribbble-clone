@@ -15,21 +15,21 @@ module.exports = {
         test: /\.(js|jsx)?$/,
         loader: 'babel-loader'
       },
-      // {
-      //   test: /\.(scss|css)?$/,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: ['css-loader', 'sass-loader']
-      //   })
-      // },
+      {
+        test: /\.(scss|css)?$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
+      },
       // { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
       //   loader: 'file-loader?name=fonts/[name].[ext]'
       // }
     ]
   },
   output: {
-    path: `${__dirname}/dist/js/`,
-    filename: 'bundle.min.js',
+    path: `${__dirname}/dist/`,
+    filename: 'js/bundle.min.js',
     publicPath: '/dist/'
   },
   resolve: {
@@ -48,7 +48,7 @@ module.exports = {
         NODE_ENV: "'production'"
       }
     }),
-    new ExtractTextPlugin({ filename: 'style.css', allChunks: true }),
+    new ExtractTextPlugin({ filename: 'css/style.css', allChunks: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true })
   ],
