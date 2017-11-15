@@ -1,11 +1,75 @@
-$sizes: (0,5,10,15,20,25,30,50);
+$sizes: (5,10,15,20,25,30,50);
 $positions: ('top','left','bottom','right');
 
 @each $size in $sizes {
-  .u-m-#{$size} {
+  .m-#{$size} {
     margin: $size + px;
   }
-  .u-p-#{$size} {
+  .p-#{$size} {
     padding: $size + px;
   }
+
+  .p-t-#{$size} {
+    padding-top: $size + px;
+  }
+
+  .p-b-#{$size} {
+    padding-bottom: $size + px;
+  }
+
+  .p-l-#{$size} {
+    padding-left: $size + px;
+  }
+
+  .p-r-#{$size} {
+    padding-right: $size + px;
+  }
+
+  .m-t-#{$size} {
+    margin-top: $size + px;
+  }
+
+  .m-b-#{$size} {
+    margin-bottom: $size + px;
+  }
+
+  .m-l-#{$size} {
+    margin-left: $size + px;
+  }
+
+  .m-r-#{$size} {
+    margin-right: $size + px;
+  }
+}
+
+.p-t-0 {
+  padding-top: 0px !important;
+}
+
+.p-l-0 {
+  padding-left: 0px !important;
+}
+
+.p-r-0 {
+  padding-right: 0px !important;
+}
+
+.p-b-0 {
+  padding-bottom: 0px !important;
+}
+
+.m-t-0 {
+  margin-top: 0px !important;
+}
+
+.m-l-0 {
+  margin-left: 0px !important;
+}
+
+.m-r-0 {
+  margin-right: 0px !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0px !important;
 }

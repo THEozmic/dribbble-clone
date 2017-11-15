@@ -16,3 +16,36 @@ body {
 .avartar {
   border-radius: 50%;
 }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.91);
+}
+
+.is-marginless.image.p-b-0.p-10:hover .overlay {
+  z-index: 1;
+}
+
+.card-text {
+  font-size: 20px;
+  color: rgba(4, 4, 4, 0.65);
+  display: block;
+  height: 40px;
+}
+
+.card-stats {
+  font-size: 13px;
+}
+
+.overlay-text-date {
+  position: absolute;
+  bottom: 25px;
+  font-size: 13px;
+}
