@@ -15,4 +15,66 @@ body {
 
 .avartar {
   border-radius: 50%;
+  &.large {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.91);
+  color: inherit;
+}
+
+.is-marginless.image.p-b-0.p-10:hover .overlay {
+  z-index: 1;
+}
+
+.card-text {
+  font-size: 20px;
+  color: rgba(4, 4, 4, 0.65);
+  display: block;
+  height: 40px;
+}
+
+.card-stats {
+  font-size: 13px;
+}
+
+.overlay-text-date {
+  position: absolute;
+  bottom: 25px;
+  font-size: 13px;
+}
+
+.shot-modal-user {
+  vertical-align: top;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.shot-modal-date {
+  font-size: 14px;
+  color: #9c9999;
+  .highlight {
+    font-weight: bolder;
+    color: rgba(33, 150, 243, 0.92);
+  }
+}
+
+.box.shot-box {
+  background-color: #f9f9f9;
+}
+
+.card.box.shot-box {
+  max-width: 300px;
+  background-color: #fff;
+  display: inline-block;
 }
