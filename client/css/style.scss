@@ -74,7 +74,28 @@ body {
 }
 
 .card.box.shot-box {
-  max-width: 300px;
+  width: 100%;
   background-color: #fff;
   display: inline-block;
+}
+
+.image.is-32x32 {
+  width: 32px;
+}
+
+.shot-response .username {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.shot-response {
+  display: inline-block;
+  width: 100%;
+}
+
+.interact-btn {
+  border: 0px;
+  background-color: transparent;
+  font-size: inherit;
+  cursor: pointer;
 }
