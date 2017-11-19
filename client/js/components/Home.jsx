@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import shots from './shots';
 import Shots from './Shots';
 import ShotModal from './ShotModal';
 import Nav from './Nav';
