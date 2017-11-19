@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import shots from './shots';
 import Shots from './Shots';
 import ShotModal from './ShotModal';
+import Nav from './Nav';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,6 +14,18 @@ export default class App extends Component {
       shot: {}
     };
   }
+
+  componentDidMount() {
+    this._isMounted = true;
+    window.onpopstate = ()=> {
+      if(this._isMounted) {
+        const { hash } = location;
+        if(hash.indexOf('shot') === -1)
+          this.setState({ isModalVisible: false })
+      }
+    }
+  }
+
 
   onClick (event, isToClose, shot = {}) {
     event.preventDefault();
@@ -34,6 +47,7 @@ export default class App extends Component {
   render () {
     return (
       <div>
+        <Nav/>
         <Shots onClick={this.onClick}/>
         { this.state.isModalVisible ? 
           <ShotModal shot={this.state.shot} onClick={this.onClick}/>:
