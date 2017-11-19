@@ -149,6 +149,93 @@ class App extends React.Component {
                           </div>
                         </div>
                       </div>
+                      <div className="shot-description">
+                        <p>So I put together a new walk cycle. Ideally, I’d like to make a
+                          hundred of these to hone my animation and illustration skills
+                          and then move on to more advanced animation.
+                          What do you guys think?
+                        </p>
+                        <br/>
+                        <p>Should I try different walk cycles?
+                          Double bounce? Et cetera? Please comment below and tell me what
+                          you think I should do. Also, check out the links below.
+                        </p>
+                      </div>
+                      <div className="m-t-15">
+                        <button className="interact-btn">
+                          <span className="m-r-5">
+                              <i class="fa fa-heart" aria-hidden="true"></i>
+                            </span>
+                            904 likes
+                        </button>
+                        <button className="interact-btn">
+                          <span className="m-r-5">
+                              <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                            </span>
+                            20 saves
+                        </button>
+                      </div>
+                      <div className="shot-responses-container">
+                        <hr/>
+                          <div class="field">
+                            {/* <label class="label">Respond</label> */}
+                            <div class="control">
+                              <textarea class="textarea" placeholder="Write your response"></textarea>
+                            </div>
+                          </div>
+                          <div className="level">
+                            <div className="level-left"></div>
+                            <div className="level-right">
+                              <div class="control">
+                                <button class="button is-link">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                        <hr/>
+                        <div>
+                          <h5><strong>3 Responses</strong></h5>
+                        </div>
+                        <div className="shot-responses m-t-20">
+                          <div className="shot-response">
+                            <span className="is-pulled-left m-r-5">
+                              <img
+                                className="image is-32x32 avartar"
+                                src="https://cdn.dribbble.com/users/1055435/avatars/mini/69dec8ee6bc9fb84ab3105ed199f204a.jpg?1480127236"/>
+                            </span>
+                            <span className="username">
+                              <strong>{this.state.shot.name}</strong>
+                              <div>Nice work @Aurélien Salomon ➔ ! I love your concept !</div>
+                              <div className="m-t-10">1 day ago</div>
+                            </span>
+                          </div>
+                          <hr/>
+                          <div className="shot-response">
+                            <span className="is-pulled-left m-r-5">
+                              <img
+                                className="image is-32x32 avartar"
+                                src="https://cdn.dribbble.com/users/1055435/avatars/mini/69dec8ee6bc9fb84ab3105ed199f204a.jpg?1480127236"/>
+                            </span>
+                            <span className="username">
+                              <strong>{this.state.shot.name}</strong>
+                              <div>Nice work @Aurélien Salomon ➔ ! I love your concept !</div>
+                              <div className="m-t-10">1 day ago</div>
+                            </span>
+                          </div>
+                          <hr/>
+                          <div className="shot-response">
+                            <span className="is-pulled-left m-r-5">
+                              <img
+                                className="image is-32x32 avartar"
+                                src="https://cdn.dribbble.com/users/1055435/avatars/mini/69dec8ee6bc9fb84ab3105ed199f204a.jpg?1480127236"/>
+                            </span>
+                            <span className="username">
+                              <strong>{this.state.shot.name}</strong>
+                              <div>Nice work @Aurélien Salomon ➔ ! I love your concept !</div>
+                              <div className="m-t-10">3 days ago</div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
