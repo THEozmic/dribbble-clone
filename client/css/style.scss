@@ -99,3 +99,34 @@ body {
   font-size: inherit;
   cursor: pointer;
 }
+
+.navbar {
+  background-color: #333;
+  img {
+    width: 130px
+  }
+}
+
+.navbar-item {
+  background-image: url("/dist/images/logo.gif");
+  display: block;
+  width: 160px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -webkit-background-size: 76px 19px;
+  -moz-background-size: 76px 19px;
+  background-size: 150px;
+  &:hover {
+    background-color: unset !important;
+    opacity: .6
+  }
+}
+
+.modal {
+  z-index: 999;
+}

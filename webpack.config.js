@@ -25,6 +25,10 @@ module.exports = {
       // { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
       //   loader: 'file-loader?name=fonts/[name].[ext]'
       // }
+      {
+        test: /\.(jpg|jpeg|gif|png)$/,
+        loader:'url-loader?limit=1024&name=images/[name].[ext]'
+      }
     ]
   },
   output: {
